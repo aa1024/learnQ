@@ -1,6 +1,5 @@
 q)hammDist:{count where x=y} 
 
-
 q)hammDist["karolin" ; "kathrin"] 
 3 
 
