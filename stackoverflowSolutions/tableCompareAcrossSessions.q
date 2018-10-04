@@ -2,6 +2,9 @@
 q)table1:([]col1:0n 2 3 0n ;col2:"a", " ","ca")
 q)table2:([]col3:1 2 0n 4 ;col4:```b`)
 
+/-------------------------------------------------------------------
+
+
 /local
 q)table1:([]col1:0n 2 3 0n ;col2:"a", " ","ca")
 q)table2:([]col3:1 2 0n 4 ;col4:```b`d)   //different from remote
@@ -18,3 +21,5 @@ q)local:f[]
 q)local
 (`s#`table1`table2`table3)!((`col1`col2)!2 1;(`col3`col4)!1 2;(`col5`col6)!1 2)
 
+q)remote~'local   //only table1 signature matches
+(`table1`table2`table3)!100b
